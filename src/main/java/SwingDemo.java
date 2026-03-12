@@ -28,13 +28,14 @@ public class SwingDemo extends JFrame {
 
     private SwingDemo() {
 
+        super("Java Swing Demo");
+
         // ── JFrame ────────────────────────────────────────────────────────────
         // JFrame is the top-level window (title bar, borders, close button).
-        JFrame frame = new JFrame("Java Swing Demo");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 260);
-        frame.setLocationRelativeTo(null); // center on screen
-        frame.setResizable(false);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setSize(400, 260);
+        this.setLocationRelativeTo(null); // center on screen
+        this.setResizable(false);
 
         // ── JPanel ────────────────────────────────────────────────────────────
         // JPanel is an invisible container used to group and lay out components.
@@ -97,8 +98,8 @@ public class SwingDemo extends JFrame {
         mainPanel.add(Box.createVerticalStrut(16));
         mainPanel.add(onOffSwitch);
 
-        frame.setContentPane(mainPanel);
-        frame.setVisible(true);
+        this.setContentPane(mainPanel);
+        this.setVisible(true);
     }
 
     private void onToggle() {
